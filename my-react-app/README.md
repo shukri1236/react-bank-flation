@@ -1,70 +1,198 @@
-# Getting Started with Create React App
+## **Learning Goals**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+-   Implement a mini web app to practice on components, props, state, events and data fetching in react
 
-## Available Scripts
+## **Introduction**
 
-In the project directory, you can run:
+For this project, you’ll be building out a React application that displays a list of your recent bank transactions, among other features.
 
-### `npm start`
+The instructions below will walk you through the process of ideation and planning your app: deciding on your user interface, planning how the information will be laid out on the page, etc. You should work through all the planning steps before you start doing any coding.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## **Requirements**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+For this project, you must:
 
-### `npm test`
+-   Have a well-written README file.
+-   Fetch data from a local server running JSON DB server.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **Project Setup & Pre-requisite Data**
 
-### `npm run build`
+-   In your project directory, create a db.json file and use this [dataLinks to an external site.](https://docs.google.com/document/d/1EWN0qLfAWfgzO1N2P8H5WmrsTx0nMkhp3s-rXVESTNA/edit?usp=sharing) for your server DB.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   Run this command to get the backend started: `json-server --watch db.json`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-   Test your server by visiting this route in the browser: `http://localhost:8001/transactions`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## **Project Setup**
 
-### `npm run eject`
+Once you have the plan in place for the application you want to build take the following steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-   Create a new project folder.
+-   Create a new GitHub repository (**NB: ENSURE IT IS PRIVATE**).
+-   Add your TM as a contributor to the project. (**This is only for grading purposes**)
+-   Please make sure you regularly commit to the repository.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## **Project Guidelines**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Your project should conform to the following set of guidelines:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### **Core Deliverables**
 
-## Learn More
+As a user, I can:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-   See a table of all transactions.
+-   Fill out and submit the form to add a new transaction. This should add the new  transaction to the table * the new transaction does not have to be persisted to the backend *
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   Filter transactions by typing into the search bar. Only transactions with a description matching the search term should be shown in the transactions table.
 
-### Code Splitting
+### **Bonus Deliverables**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+These bonus deliverables are here if you want an extra challenge and won't affect your score. **Make sure to commit your work to save your progress before attempting the bonus deliverables!**
 
-### Analyzing the Bundle Size
+As a user, I should be able to:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Sort transactions alphabetically by category or description.
 
-### Making a Progressive Web App
+-   Delete a transaction which will remove it from the table.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+_Happy hacking!_
 
-### Advanced Configuration
+## Rubric
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Phase 2 Rubric
 
-### Deployment
+Phase 2 Rubric
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Criteria
 
-### `npm run build` fails to minify
+Ratings
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Pts
+
+This criterion is linked to a Learning OutcomeProps & State
+
+4  pts
+
+4
+
+Advanced deliverables are met.
+
+3  pts
+
+3
+
+State works and is held by the lowest common component. No unnecessary state is created. Only the necessary props are being passed down. Functions used to edit state are passed down.
+
+2  pts
+
+2
+
+State is working. However, it may be in the wrong component, it might be nested oddly or might have some unnecessary state. Props are being passed unnecessarily to components. Functions that change or calculate state are not defined in the component that they are most closely tied to.
+
+1  pts
+
+1
+
+State is not being set or updated. Props are not being passed down, or you are passing down the right prop but trying to access it incorrectly (wrong name, unnecessary this, state instead of props) or key props are missing. API call does not successfully populate state or does not rely on state at all (e.g. uses querySelector() to grab the value instead of passing the state).
+
+0  pts
+
+0
+
+No code or very little code has been written or the code doesn't run. If it runs, no deliverables have been met. Not managed to set state or pass props successfully.
+
+4  pts  
+
+This criterion is linked to a Learning OutcomeCode Structure/Efficiency
+
+2  pts
+
+2
+
+Advanced deliverables met. Uses some of the following: destructuring, functional components, spreading, hooks, pure functions, and performance is taken into account.
+
+1.5  pts
+
+1.5
+
+Components are structured in a logical way. Class components only used when needed, functional components used for everything else. Code is abstracted into clear methods. Used object destructuring and spread operator successfully.
+
+1  pts
+
+1
+
+Fetch is triggered in the right place. Code is not abstracted into clear methods. Additional components have been added which serve no purpose. Props and variables could be named consistently and descriptively.
+
+0.5  pts
+
+0.5
+
+Starter components have been unnecessarily modified and broken. There is no reference to componentDidMount. Incorrect or unnecessary lifecycle methods are used. Vanilla JavaScript methods (e.g. querySelector()) are being used instead of appropriate React techniques.
+
+0  pts
+
+0
+
+No code or very little code has been written or the code doesn't run, i.e. syntax errors, imports missing, etc. If it runs, no deliverables have been met.
+
+2  pts  
+
+This criterion is linked to a Learning OutcomeData Fetching
+
+4  pts
+
+4
+
+Data is fetched correctly from a local JSON server and displayed in the app.
+
+3  pts
+
+3
+
+Data is fetched from a local JSON server, but there are minor issues with the display.
+
+1  pts
+
+1
+
+Data fetching is attempted but not working correctly or consistently.
+
+0  pts
+
+0
+
+No data fetching implemented.
+
+4  pts  
+
+This criterion is linked to a Learning OutcomeTransactions Table
+
+5  pts
+
+5
+
+The transactions table is correctly implemented, displays all transactions accurately and the form is fully functional, adding new transactions correctly to the table.
+
+4  pts
+
+4
+
+The transactions table is implemented but may have minor display issues. Form adds new transactions but may have minor issues.
+
+2  pts
+
+2
+
+The transactions table and the form are implemented but have significant display or functionality issues.
+
+0  pts
+
+0
+
+No transactions table and form are present.
+
+5  pts  
+
+Total Points:  15
+
+[Previous](https://moringa.instructure.com/courses/800/modules/items/125858)[Next](https://moringa.instructure.com/courses/800/modules/items/125859)
